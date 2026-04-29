@@ -76,8 +76,8 @@ export const profileData = {
 	phone: '+64 20 477 6871',
 	githubLabel: 'github.com/ttang1024',
 	githubUrl: 'https://github.com/ttang1024',
-	linkedinLabel: 'linkedin.com/in/ting-tang',
-	linkedinUrl: 'https://www.linkedin.com/in/ting-tang-24b0b4355/',
+	linkedinLabel: 'linkedin.com/in/tingtang12',
+	linkedinUrl: 'https://www.linkedin.com/in/tingtang12/',
 	status: 'Open to Work',
 	sidebarFocus: ['Frontend-focused', 'React / TypeScript / .NET'],
 	summary:
