@@ -46,9 +46,11 @@ interface SectionProps {
 function Section({ title, children }: SectionProps) {
   return (
     <section className="mb-7">
-      <h2 className="mb-2.5 border-b-[1.5px] border-[#e5e5ea] pb-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[#059669]">
-        {title}
-      </h2>
+      {title && (
+        <h2 className="mb-2.5 border-b-[1.5px] border-[#e5e5ea] pb-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[#059669]">
+          {title}
+        </h2>
+      )}
       {children}
     </section>
   )
@@ -86,24 +88,24 @@ export default function AboutApp() {
         <div className="mb-2 rounded-full border border-[#30d158]/35 bg-[#30d158]/14 px-3 py-1 text-[11.5px] font-semibold text-[#32d74b]">
           {profileData.status}
         </div>
-        <p className="text-center text-[10.5px] font-medium leading-[1.5] text-white/46">
+        {/* <p className="text-center text-[10.5px] font-medium leading-[1.5] text-white/46">
           {profileData.sidebarFocus.map(line => (
             <span key={line}>
               {line}<br />
             </span>
           ))}
-        </p>
+        </p> */}
       </div>
 
       {/* Main */}
       <div className="min-w-0 flex-1 bg-[#fafafa] p-6 sm:overflow-y-auto sm:p-7">
-        <Section title="Summary">
+        <Section title="">
           <p className="text-[13px] leading-[1.7] text-[#3a3a3a]">
             {profileData.summary}
           </p>
         </Section>
 
-        <Section title="Core Highlights">
+        <Section title="Highlights">
           <ul className="list-none p-0 flex flex-col gap-2">
             {aboutHighlights.map((h, i) => (
               <li key={i} className="flex gap-2 text-[13px] leading-[1.6] text-[#3a3a3a]">

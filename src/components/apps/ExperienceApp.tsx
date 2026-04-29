@@ -39,7 +39,6 @@ export default function ExperienceApp() {
           <div className="mb-5 rounded-[18px] border border-white/70 bg-white/70 px-4 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.08)] backdrop-blur-xl sm:px-5">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#86868b]">Portfolio</p>
                 <h1 className="text-[25px] font-semibold leading-tight text-[#1d1d1f] sm:text-[30px]">Experience & Projects</h1>
                 <p className="mt-1.5 max-w-[540px] text-[13px] leading-[1.55] text-[#6e6e73]">
                   Frontend-focused full-stack developer with React, TypeScript, .NET, and API integration experience across AI, healthcare, finance, and consumer platforms.
@@ -97,7 +96,7 @@ export default function ExperienceApp() {
                       {job.screenshots.length > 0 && (
                         <div className="mb-4 flex gap-2 overflow-x-auto pb-1">
                           {job.screenshots.map((src, k) => (
-                            <button key={src} onClick={() => open(job.screenshots, k)} className="shrink-0 overflow-hidden rounded-xl border border-black/[0.08] bg-[#f5f5f7] transition-opacity hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-[#059669]/30">
+                            <button key={src} onClick={() => open(job.screenshots, k)} className="shrink-0 overflow-hidden rounded-md border border-black/[0.08] bg-[#f5f5f7] transition-opacity hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-[#059669]/30">
                               <img src={src} alt={`${job.company} screenshot ${k + 1}`} className="block h-[92px] w-auto object-cover" />
                             </button>
                           ))}
@@ -189,7 +188,7 @@ export default function ExperienceApp() {
                         {job.screenshots.length > 0 && (
                           <div className="flex gap-2 overflow-x-auto pb-1">
                             {job.screenshots.map((src, k) => (
-                              <button key={src} onClick={() => open(job.screenshots, k)} className="shrink-0 overflow-hidden rounded-xl border border-black/[0.08] bg-[#f5f5f7] transition-opacity hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-[#059669]/30">
+                              <button key={src} onClick={() => open(job.screenshots, k)} className="shrink-0 overflow-hidden rounded-md border border-black/[0.08] bg-[#f5f5f7] transition-opacity hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-[#059669]/30">
                                 <img src={src} alt={`${job.company} screenshot ${k + 1}`} className="block h-[78px] w-auto object-cover" />
                               </button>
                             ))}
@@ -218,7 +217,7 @@ export default function ExperienceApp() {
           <img
             src={lightbox.srcs[lightbox.idx]}
             alt="Screenshot"
-            className="max-w-[82%] max-h-[80%] rounded-xl shadow-2xl object-contain select-none"
+            className="max-w-[82%] max-h-[80%] rounded-md shadow-2xl object-contain select-none"
             onClick={e => e.stopPropagation()}
           />
           <button className="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 text-white flex items-center justify-center text-sm hover:bg-black/60 transition-colors" onClick={close}>✕</button>
